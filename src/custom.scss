@@ -1,7 +1,28 @@
-@for $i from 1 to 7 {
+$grey: #222;
+
+*,
+*::before,
+*::after {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+a {
+  all: unset;
+  background-color: rgba(98, 240, 240, 50%);
+  border-bottom: 4px solid darken(rgb(98, 240, 240), 25%);
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@for $i from 0 to 7 {
   h#{$i} {
-    font-family: "Courier New", Courier, monospace;
-    color: lighten(#222, 5% * $i);
+    font-family: monospace, "Courier New", Courier, monospace;
+    color: lighten($grey, 5% * $i);
   }
 }
 
@@ -27,5 +48,26 @@
   }
   .mt-#{$i} {
     margin-top: $i * 1px;
+  }
+
+  .p-#{$i} {
+    padding: $i * 1px;
+  }
+  .pt-#{$i} {
+    padding-top: $i * 1px;
+  }
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  // all: unset;
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid $grey;
+
+  &.primary {
+    background-color: green;
+    color: white;
   }
 }
