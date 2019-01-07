@@ -1,0 +1,30 @@
+@for $i from 1 to 7 {
+  h#{$i} {
+    color: lighten(#222, 5% * $i);
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+@for $i from 1 to 13 {
+  .col-#{$i} {
+    // display: inline-block;
+    width: 100% / $i;
+  }
+}
+
+@for $i from 1 to 100 {
+  .m-#{$i} {
+    margin: $i * 1px;
+  }
+  .mt-#{$i} {
+    margin-top: $i * 1px;
+  }
+}

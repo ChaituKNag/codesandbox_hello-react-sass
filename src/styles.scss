@@ -1,0 +1,9 @@
+@import "./custom.scss";
+
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &-header {
+    font-family: "Courier New", Courier, monospace;
+  }
+}
