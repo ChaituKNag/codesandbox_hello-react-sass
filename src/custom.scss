@@ -1,5 +1,6 @@
 @for $i from 1 to 7 {
   h#{$i} {
+    font-family: "Courier New", Courier, monospace;
     color: lighten(#222, 5% * $i);
   }
 }
